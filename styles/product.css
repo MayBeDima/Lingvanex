@@ -1,0 +1,139 @@
+.product__descr {
+    max-width: 900px;
+}
+
+.tabs {
+    width: 100%;
+}
+
+.tabs__btn-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.tabs__btn {
+    min-width: max-content;
+    background-color: var(--grey);
+    color: var(--black);
+    padding: 16px 32px;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.tabs__btn_active {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.tabs__content-wrapper {
+    position: relative;
+    min-width: 1137px;
+    margin-bottom: 120px;
+    padding: 42px;
+    border-radius: 32px;
+    border: 2px solid #0000000A;
+    box-shadow: 0px 4px 12px 0px #0000001F;
+    background-color: var(--white);
+}
+
+.tabs__content-wrapper::after, .tabs__content-wrapper::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    border-radius: 32px;
+    border: 2px solid #0000000A;
+    box-shadow: 0px 4px 12px 0px #0000001F;
+    background-color: var(--white);
+    z-index: -1;
+}
+
+.tabs__content-wrapper::after {
+    left: 54px;
+    right: 54px;
+    bottom: -27px;
+}
+
+.tabs__content-wrapper::before {
+    left: 88px;
+    right: 88px;
+    bottom: -56px;
+}
+
+.tabs__item {
+    display: none;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+.tabs__item_active {
+    display: flex;
+}
+
+.tabs__title {
+    text-align: left;
+}
+
+.tabs__descr {
+    text-align: left;
+    max-width: 450px;
+    list-style: inside;
+}
+
+.tabs__image {
+    border-radius: 36px;
+    min-width: 507px;
+    width: 507px;
+    height: 338px;
+}
+
+.tabs__image img {
+    object-fit: cover;
+}
+
+
+@media (max-width: 1400px) {}
+
+@media (max-width: 1200px) {
+    .tabs__content-wrapper {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .tabs__image {
+        min-width: 407px;
+        width: 407px;
+        height: 288px;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .tabs__item {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tabs__image {
+        width: 507px;
+        height: 338px;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {
+    .tabs__content-wrapper {
+        padding: 24px;
+    }
+
+    .tabs__image {
+        min-width: auto;
+        width: 100%;
+        height: 260px;
+    }
+}
